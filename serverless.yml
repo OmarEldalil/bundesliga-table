@@ -1,0 +1,40 @@
+service: bundesliga-rating-table
+frameworkVersion: '3'
+
+useDotenv: true
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+provider:
+  name: aws
+  runtime: nodejs14.x
+  iam:
+    role: ${env:RDS_ROLE_ARN}
+  stage: ${opt:stage, 'dev'}
+  environment:
+    REGION: 'us-east-1'
+    DB_NAME: ${env:DB_NAME}
+    RDS_ROLE_ARN: ${env:RDS_ROLE_ARN}
+    DB_SECRET_ARN: ${env:DB_SECRET_ARN}
+    DB_RESOURCE_ARN: ${env:DB_RESOURCE_ARN}
+
+functions:
+  seed:
+    handler: handler.seedDb
+    events:
+      - http:
+          method: POST
+          path: /seed
+  matchResults:
+    handler: handler.matchResult
+    events:
+      - http:
+          method: POST
+          path: /matchResult
+  ranking:
+    handler: handler.ranking
+    events:
+      - http:
+          method: GET
+          path: /ranking

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Arminia Bielefeld"
+  },
+  {
+    "id": 2,
+    "name": "FC Augsburgb"
+  },
+  {
+    "id": 3,
+    "name": "Bayer Leverkusenb"
+  },
+  {
+    "id": 4,
+    "name": "Bayern Munichb"
+  },
+  {
+    "id": 5,
+    "name": "VfL Bochum"
+  },
+  {
+    "id": 6,
+    "name": "Borussia Dortmunda"
+  },
+  {
+    "id": 7,
+    "name": "Borussia Mönchengladbach"
+  },
+  {
+    "id": 8,
+    "name": "Eintracht Frankfurta"
+  },
+  {
+    "id": 9,
+    "name": "SC Freiburg"
+  },
+  {
+    "id": 10,
+    "name": "Greuther Fürth"
+  },
+  {
+    "id": 11,
+    "name": "Hertha BSCa"
+  },
+  {
+    "id": 12,
+    "name": "TSG 1899 Hoffenheimb"
+  },
+  {
+    "id": 13,
+    "name": "1. FC Kölna"
+  },
+  {
+    "id": 14,
+    "name": "RB Leipzigb"
+  },
+  {
+    "id": 15,
+    "name": "Mainz 05"
+  },
+  {
+    "id": 16,
+    "name": "VfB Stuttgarta"
+  },
+  {
+    "id": 17,
+    "name": "Union Berlinb"
+  },
+  {
+    "id": 18,
+    "name": "VfL Wolfsburg"
+  }
+]
