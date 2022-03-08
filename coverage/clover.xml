@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1646707707692" clover="3.2.0">
+  <project timestamp="1646707707693" name="All files">
+    <metrics statements="66" coveredstatements="58" conditionals="49" coveredconditionals="40" methods="19" coveredmethods="16" elements="134" coveredelements="114" complexity="0" loc="66" ncloc="66" packages="5" files="8" classes="8"/>
+    <package name="bundesliga-rating-table">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="constants.ts" path="/Users/omar.eldalil/Desktop/bundesliga-rating-table/constants.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="bundesliga-rating-table.errors">
+      <metrics statements="10" coveredstatements="7" conditionals="4" coveredconditionals="1" methods="4" coveredmethods="3"/>
+      <file name="ServerError.ts" path="/Users/omar.eldalil/Desktop/bundesliga-rating-table/errors/ServerError.ts">
+        <metrics statements="5" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+      </file>
+      <file name="ValidationError.ts" path="/Users/omar.eldalil/Desktop/bundesliga-rating-table/errors/ValidationError.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="bundesliga-rating-table.queries">
+      <metrics statements="12" coveredstatements="12" conditionals="10" coveredconditionals="7" methods="4" coveredmethods="4"/>
+      <file name="match.query.ts" path="/Users/omar.eldalil/Desktop/bundesliga-rating-table/queries/match.query.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="ranking.query.ts" path="/Users/omar.eldalil/Desktop/bundesliga-rating-table/queries/ranking.query.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="10" coveredconditionals="7" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="bundesliga-rating-table.services">
+      <metrics statements="29" coveredstatements="28" conditionals="31" coveredconditionals="30" methods="7" coveredmethods="7"/>
+      <file name="match.service.ts" path="/Users/omar.eldalil/Desktop/bundesliga-rating-table/services/match.service.ts">
+        <metrics statements="23" coveredstatements="22" conditionals="27" coveredconditionals="26" methods="4" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="3" type="cond" truecount="5" falsecount="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="46" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="3" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="55" count="4" type="stmt"/>
+      </file>
+      <file name="ranking.service.ts" path="/Users/omar.eldalil/Desktop/bundesliga-rating-table/services/ranking.service.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="bundesliga-rating-table.utils">
+      <metrics statements="14" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
+      <file name="dbClient.ts" path="/Users/omar.eldalil/Desktop/bundesliga-rating-table/utils/dbClient.ts">
+        <metrics statements="14" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

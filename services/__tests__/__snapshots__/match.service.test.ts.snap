@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match service getRankingsUpdates should calculate the incremental updates in ranking for both teams 1`] = `
+Object {
+  "18": Object {
+    "conceded": 2,
+    "played": 1,
+    "points": 0,
+    "scored": 1,
+  },
+  "2": Object {
+    "conceded": 1,
+    "played": 1,
+    "points": 3,
+    "scored": 2,
+  },
+}
+`;
+
+exports[`match service getRankingsUpdates should calculate the incremental updates in ranking for both teams 2`] = `
+Object {
+  "2": Object {
+    "conceded": 1,
+    "played": 1,
+    "points": 1,
+    "scored": 1,
+  },
+  "4": Object {
+    "conceded": 1,
+    "played": 1,
+    "points": 1,
+    "scored": 1,
+  },
+}
+`;

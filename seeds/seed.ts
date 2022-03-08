@@ -1,4 +1,4 @@
-import dbClient, {queryBuilder} from '../utils/dbClient'
+import {executeQuery, queryBuilder} from '../utils/dbClient'
 import {TABLES} from "../constants";
 import {Knex} from "knex";
 import CreateTableBuilder = Knex.CreateTableBuilder;
@@ -32,14 +32,13 @@ const createTeamIdForeignConstrain = queryBuilder.schema.alterTable(TABLES.RANKI
 }).toString()
 
 async function seed() {
-  await dbClient.query(createTeamsTableQuery)
-  await dbClient.query(createRankingsTableQuery)
-  await dbClient.query(createTeamIdForeignConstrain)
-  await dbClient.query(createMatchesTableQuery)
-  await dbClient.query(queryBuilder.insert(initialTeams).into(TABLES.TEAMS).toString())
-  await dbClient.query(queryBuilder.insert(initialRankings).into(TABLES.RANKINGS).toString())
+  await executeQuery(createTeamsTableQuery)
+  await executeQuery(createRankingsTableQuery)
+  await executeQuery(createTeamIdForeignConstrain)
+  await executeQuery(createMatchesTableQuery)
+  await executeQuery(queryBuilder.insert(initialTeams).into(TABLES.TEAMS).toString())
+  await executeQuery(queryBuilder.insert(initialRankings).into(TABLES.RANKINGS).toString())
   console.log('seeded successfully');
-
 }
 
 export default seed

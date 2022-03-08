@@ -1,8 +1,9 @@
 import {APIGatewayEvent} from "aws-lambda";
 import {getRanking} from "../services/ranking.service";
 import {APIGatewayProxyResult} from "aws-lambda/trigger/api-gateway-proxy";
+import {errorHandlerWrapper} from "../utils/errorHandlerWrapper";
 
-export const ranking = async (event: APIGatewayEvent): Promise<APIGatewayProxyResult> => {
+export const ranking = errorHandlerWrapper(async (event: APIGatewayEvent): Promise<APIGatewayProxyResult> => {
   const rankings = await getRanking();
   return {
     statusCode: 200,
@@ -11,4 +12,4 @@ export const ranking = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
     },
     body: JSON.stringify(rankings)
   }
-};
+});

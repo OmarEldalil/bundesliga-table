@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match query should getMatchQuery match snapshot 1`] = `
+Builder {
+  "_asColumnFlag": false,
+  "_boolFlag": "and",
+  "_debug": undefined,
+  "_events": Object {},
+  "_eventsCount": 0,
+  "_joinFlag": "inner",
+  "_maxListeners": undefined,
+  "_method": "select",
+  "_notFlag": false,
+  "_single": Object {
+    "only": false,
+    "table": "matches",
+  },
+  "_statements": Array [
+    Object {
+      "grouping": "columns",
+      "value": Array [
+        "id",
+      ],
+    },
+    Object {
+      "asColumn": false,
+      "bool": "and",
+      "column": "home_team_id",
+      "grouping": "where",
+      "not": false,
+      "operator": "=",
+      "type": "whereBasic",
+      "value": 1,
+    },
+    Object {
+      "asColumn": false,
+      "bool": "and",
+      "column": "away_team_id",
+      "grouping": "where",
+      "not": false,
+      "operator": "=",
+      "type": "whereBasic",
+      "value": 2,
+    },
+  ],
+  "and": [Circular],
+  "client": Client_MySQL {
+    "_events": Object {
+      "query": [Function],
+      "query-error": [Function],
+      "query-response": [Function],
+      "start": [Function],
+    },
+    "_eventsCount": 4,
+    "_maxListeners": undefined,
+    "config": Object {
+      "client": "mysql",
+    },
+    "connectionConfigExpirationChecker": null,
+    "connectionSettings": Object {},
+    "logger": Logger {
+      "_debug": undefined,
+      "_deprecate": undefined,
+      "_enableColors": undefined,
+      "_error": undefined,
+      "_inspectionDepth": 5,
+      "_warn": undefined,
+    },
+    "valueForUndefined": Raw {
+      "_debug": undefined,
+      "_events": Object {},
+      "_eventsCount": 0,
+      "_maxListeners": undefined,
+      "_wrappedAfter": undefined,
+      "_wrappedBefore": undefined,
+      "bindings": undefined,
+      "client": [Circular],
+      "sql": "DEFAULT",
+      Symbol(kCapture): false,
+    },
+    Symbol(kCapture): false,
+  },
+  Symbol(kCapture): false,
+}
+`;
+
+exports[`match query should insertMatchQuery match snapshot 1`] = `
+Builder {
+  "_asColumnFlag": false,
+  "_boolFlag": "and",
+  "_debug": undefined,
+  "_events": Object {},
+  "_eventsCount": 0,
+  "_joinFlag": "inner",
+  "_maxListeners": undefined,
+  "_method": "insert",
+  "_notFlag": false,
+  "_single": Object {
+    "insert": Object {
+      "away_team_id": 1,
+      "away_team_score": 1,
+      "home_team_id": 2,
+      "home_team_score": 1,
+    },
+    "only": false,
+    "table": "matches",
+  },
+  "_statements": Array [],
+  "and": [Circular],
+  "client": Client_MySQL {
+    "_events": Object {
+      "query": [Function],
+      "query-error": [Function],
+      "query-response": [Function],
+      "start": [Function],
+    },
+    "_eventsCount": 4,
+    "_maxListeners": undefined,
+    "config": Object {
+      "client": "mysql",
+    },
+    "connectionConfigExpirationChecker": null,
+    "connectionSettings": Object {},
+    "logger": Logger {
+      "_debug": undefined,
+      "_deprecate": undefined,
+      "_enableColors": undefined,
+      "_error": undefined,
+      "_inspectionDepth": 5,
+      "_warn": undefined,
+    },
+    "valueForUndefined": Raw {
+      "_debug": undefined,
+      "_events": Object {},
+      "_eventsCount": 0,
+      "_maxListeners": undefined,
+      "_wrappedAfter": undefined,
+      "_wrappedBefore": undefined,
+      "bindings": undefined,
+      "client": [Circular],
+      "sql": "DEFAULT",
+      Symbol(kCapture): false,
+    },
+    Symbol(kCapture): false,
+  },
+  Symbol(kCapture): false,
+}
+`;

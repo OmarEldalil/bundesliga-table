@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ranking query should insertMatchQuery match snapshot 1`] = `
+"
+        SELECT *, scored - conceded AS goals_diff
+        FROM rankings
+                 INNER JOIN teams ON teams.id = rankings.team_id
+            
+        ORDER BY points DESC, goals_diff DESC
+            LIMIT 20
+    "
+`;
+
+exports[`ranking query should updateRankingQuery match snapshot 1`] = `
+Builder {
+  "_asColumnFlag": false,
+  "_boolFlag": "and",
+  "_debug": undefined,
+  "_events": Object {},
+  "_eventsCount": 0,
+  "_joinFlag": "inner",
+  "_maxListeners": undefined,
+  "_method": "update",
+  "_notFlag": false,
+  "_single": Object {
+    "only": false,
+    "table": "rankings",
+    "update": Object {
+      "conceded": 1,
+      "played": 2,
+      "points": 4,
+      "scored": 5,
+      "team_id": 1,
+    },
+  },
+  "_statements": Array [
+    Object {
+      "asColumn": false,
+      "bool": "and",
+      "column": "team_id",
+      "grouping": "where",
+      "not": false,
+      "operator": "=",
+      "type": "whereBasic",
+      "value": 1,
+    },
+  ],
+  "and": [Circular],
+  "client": Client_MySQL {
+    "_events": Object {
+      "query": [Function],
+      "query-error": [Function],
+      "query-response": [Function],
+      "start": [Function],
+    },
+    "_eventsCount": 4,
+    "_maxListeners": undefined,
+    "config": Object {
+      "client": "mysql",
+    },
+    "connectionConfigExpirationChecker": null,
+    "connectionSettings": Object {},
+    "logger": Logger {
+      "_debug": undefined,
+      "_deprecate": undefined,
+      "_enableColors": undefined,
+      "_error": undefined,
+      "_inspectionDepth": 5,
+      "_warn": undefined,
+    },
+    "valueForUndefined": Raw {
+      "_debug": undefined,
+      "_events": Object {},
+      "_eventsCount": 0,
+      "_maxListeners": undefined,
+      "_wrappedAfter": undefined,
+      "_wrappedBefore": undefined,
+      "bindings": undefined,
+      "client": [Circular],
+      "sql": "DEFAULT",
+      Symbol(kCapture): false,
+    },
+    Symbol(kCapture): false,
+  },
+  Symbol(kCapture): false,
+}
+`;

@@ -1,19 +1,11 @@
-import dbClient, {queryBuilder} from "../utils/dbClient";
-import {TABLES} from "../constants";
-import {MatchEvent} from "../services/match.service";
+import {executeQuery} from "../utils/dbClient";
+import {MatchEvent} from "../interfaces/MatchEvent";
+import {Match} from "../interfaces/Match";
+import {getMatchQuery, insertMatchQuery} from "../queries/match.query";
 
-export interface Match {
-  home_team_id: number
-  home_team_score: number
-  away_team_id: number
-  away_team_score: number
-}
 
 export const getMatch = async ({homeTeamId, awayTeamId}): Promise<Match[]> => {
-  const resp = await dbClient.query(queryBuilder.select('id').from(TABLES.MATCHES).where({
-    'home_team_id': homeTeamId,
-    'away_team_id': awayTeamId,
-  }).toString())
+  const resp = await executeQuery(getMatchQuery({homeTeamId, awayTeamId}))
 
   return resp.records
 };
@@ -25,5 +17,5 @@ export const insertMatch = async (match: MatchEvent): Promise<void> => {
     away_team_id: match.away.teamId,
     away_team_score: match.away.goalsScored
   }
-  await dbClient.query(queryBuilder.insert(matchObject).into(TABLES.MATCHES).toString())
+  await executeQuery(insertMatchQuery(matchObject))
 };

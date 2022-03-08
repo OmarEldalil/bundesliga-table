@@ -9,8 +9,14 @@ plugins:
 provider:
   name: aws
   runtime: nodejs14.x
-  iam:
-    role: ${env:RDS_ROLE_ARN}
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - rds:*
+        - ec2:*
+        - rds-data:ExecuteStatement
+        - secretsmanager:GetSecretValue
+      Resource: "*"
   stage: ${opt:stage, 'dev'}
   environment:
     REGION: 'us-east-1'
