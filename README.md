@@ -11,6 +11,9 @@ aws lambda, rds (amazon Aurora serverless using data api) using serverless framw
 -  to run it locally, run "npm run start-local"
 -  for running unit tests, just run "npm run test"
 
+for more information about setting up credentials of serverless project please read 
+https://www.serverless.com/framework/docs/providers/aws/guide/credentials/
+
 I've created a third endpoint for seeding the database with bundesliga table, you can call that endpoint just one time and then you can call the 2 endpoints we have.
 
 I'm using the serverless Aurora instance so if there's no connections with it, it shutdowns automatically so it's ok just to retry once if you get a message of db is not ready 
