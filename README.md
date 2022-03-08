@@ -9,6 +9,7 @@ aws lambda, rds (amazon Aurora serverless using data api) using serverless framw
 - create RDS aurora instance making sure of checking data api to true
 - copy .env.example to be .env and update the values inside it with correct ones from aws console
 -  to run it locally, run "npm run start-local"
+-  for running unit tests, just run "npm run test"
 
 I've created a third endpoint for seeding the database with bundesliga table, you can call that endpoint just one time and then you can call the 2 endpoints we have.
 
