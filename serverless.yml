@@ -21,7 +21,6 @@ provider:
   environment:
     REGION: 'us-east-1'
     DB_NAME: ${env:DB_NAME}
-    RDS_ROLE_ARN: ${env:RDS_ROLE_ARN}
     DB_SECRET_ARN: ${env:DB_SECRET_ARN}
     DB_RESOURCE_ARN: ${env:DB_RESOURCE_ARN}
 

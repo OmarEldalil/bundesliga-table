@@ -3,7 +3,7 @@ import {bulkUpdateRankings, getRankings} from "../repositories/rankings.repo";
 import {Ranking} from "../interfaces/Ranking";
 import {RankingQuery} from "../interfaces/RankingQuery";
 
-export const getRanking = async (params: RankingQuery = {limit: 20}): Promise<Ranking[]> => {
+export const getRanking = async (params: RankingQuery = {limit: 20, page: 1}): Promise<Ranking[]> => {
   return await getRankings(params)
 };
 

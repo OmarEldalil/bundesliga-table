@@ -1,4 +1,5 @@
 export interface RankingQuery {
   ids?: number[],
-  limit?: number
+  limit?: number,
+  page?: number
 }
