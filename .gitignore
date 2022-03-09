@@ -2,6 +2,7 @@ node_modules
 .build
 .serverless
 .env
+.env.dev
 .idea
 
 .DS_Store

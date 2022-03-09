@@ -31,13 +31,23 @@ const createTeamIdForeignConstrain = queryBuilder.schema.alterTable(TABLES.RANKI
   table.foreign('team_id').references(`${TABLES.TEAMS}.id`);
 }).toString()
 
-async function seed() {
-  await executeQuery(createTeamsTableQuery)
-  await executeQuery(createRankingsTableQuery)
-  await executeQuery(createTeamIdForeignConstrain)
-  await executeQuery(createMatchesTableQuery)
-  await executeQuery(queryBuilder.insert(initialTeams).into(TABLES.TEAMS).toString())
-  await executeQuery(queryBuilder.insert(initialRankings).into(TABLES.RANKINGS).toString())
+async function seed(withData = false) {
+  try {
+    await executeQuery(createTeamsTableQuery)
+    await executeQuery(createRankingsTableQuery)
+    try {
+      await executeQuery(createTeamIdForeignConstrain)
+    } catch (err) {
+      console.warn(err);
+    }
+    await executeQuery(createMatchesTableQuery)
+    if (withData) {
+      await executeQuery(queryBuilder.insert(initialTeams).into(TABLES.TEAMS).toString())
+      await executeQuery(queryBuilder.insert(initialRankings).into(TABLES.RANKINGS).toString())
+    }
+  } catch (err) {
+    console.log(err);
+  }
   console.log('seeded successfully');
 }
 

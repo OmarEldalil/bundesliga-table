@@ -7,7 +7,7 @@ exports[`ranking query should insertMatchQuery match snapshot 1`] = `
                  INNER JOIN teams ON teams.id = rankings.team_id
             
         ORDER BY points DESC, goals_diff DESC
-            LIMIT 20
+            LIMIT 20 OFFSET 0
     "
 `;
 
