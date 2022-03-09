@@ -3,6 +3,7 @@ node_modules
 .serverless
 .env
 .env.dev
+.env.prod
 .idea
 
 .DS_Store
