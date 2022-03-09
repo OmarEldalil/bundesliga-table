@@ -13,19 +13,20 @@ https://www.serverless.com/framework/docs/providers/aws/guide/credentials/
 ### AWS RDS Aurora (MySql)
 - open aws dashboard, go to rds service, click on databases on the left nav, click create database
 - select (
-  creation method: standard create
-  engine type: Aurora
-  edition: MySql
-  capacity: serverless
-  select mysql 5.7
-  cluster name identifier: bundesligaRankingProd (any name must be unique)
-  username: any
-  password: any
-  capacity: 1 ACU each (any)
-  leave the default vpc, using data api, we can run sql queries even from outside the vpc
-  data api: TRUE ---> THIS IS VERY IMPORTANT
-  initial database name: bundesliga  
-) then click create and wait until its status is available
+  - creation method: standard create
+  - engine type: Aurora
+  - edition: MySql
+  - capacity: serverless
+  - select mysql 5.7
+  - cluster name identifier: bundesligaRankingProd (any name must be unique)
+  - username: any
+  - password: any
+  - capacity: 1 ACU each (any)
+  - leave the default vpc, using data api, we can run sql queries even from outside the vpc
+  - **data api: TRUE ---> THIS IS VERY IMPORTANT**
+  - initial database name: bundesliga  
+) 
+then click create and wait until its status is available
 - make sure it's working by clicking query editor on the left navigation and enter username and password
 - copy .env.example to be .env and update the values of DB_SECRET_ARN and DB_RESOURCE_ARN
   DB_RESOURCE_ARN: go to databases, click on your cluster name identifier, click on configurations and copy ARN
