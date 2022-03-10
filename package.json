@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start-local": "NODE_OPTIONS='--inspect' set NODE_ENV=local && sls offline --stage dev",
+    "test-coverage": "jest --coverage",
     "test": "jest"
   },
   "description": "",
