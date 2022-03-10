@@ -12,5 +12,5 @@ export const bulkUpdateRankings = async (updatedRanks: UpdatedRanking[]): Promis
 
 export const getRankings = async (params: RankingQuery) => {
   const resp = await executeQuery(getRankingsQuery(params))
-  return resp.records as Ranking[]
+  return resp?.records as Ranking[]
 };

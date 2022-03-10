@@ -7,7 +7,7 @@ import {getMatchQuery, insertMatchQuery} from "../queries/match.query";
 export const getMatch = async ({homeTeamId, awayTeamId}): Promise<Match[]> => {
   const resp = await executeQuery(getMatchQuery({homeTeamId, awayTeamId}))
 
-  return resp.records
+  return resp?.records
 };
 
 export const insertMatch = async (match: MatchEvent): Promise<void> => {
