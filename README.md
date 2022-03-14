@@ -41,3 +41,5 @@ I've created a third endpoint for seeding the database with bundesliga table, yo
 I'm using the serverless Aurora instance so if there's no connections with it, it shutdowns automatically so it's ok just to retry once if you get a message of db is not ready 
 
 NOTE: ranking pagination is implemented, you can pass limit and page in the query params
+
+for ERD and architecture diagram check this https://drive.google.com/file/d/1k4d-lww5tM-Ujx0KGbuxMrla7vAe6iF5/view?usp=sharing
