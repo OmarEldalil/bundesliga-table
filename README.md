@@ -39,3 +39,5 @@ then click create and wait until its status is available
 I've created a third endpoint for seeding the database with bundesliga table, you can call that endpoint just one time and then you can call the 2 endpoints we have, its url will be available after you deploy.
 
 I'm using the serverless Aurora instance so if there's no connections with it, it shutdowns automatically so it's ok just to retry once if you get a message of db is not ready 
+
+NOTE: ranking pagination is implemented, you can pass limit and page in the query params
